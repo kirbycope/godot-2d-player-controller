@@ -6,6 +6,9 @@ A 2D Player Controller for the Godot Game Engine.
 ## Getting Started
 Include this addon with your project. No need to "activate" as the inteded usage is to copy the controller files to the `/addons` folder and for you to then copy it to your scene/script folder and modify as need. This way if/when you pull down the latest, it will not overwrite your changes.
 
+<details>
+<summary>Using Addons</summary>
+
 ### Installing the Addon
 1. Download [install-2d-player-controller.sh](ci/install-2d-player-controller.sh)
 1. Move the file to a folder names `ci` in your project
@@ -16,6 +19,8 @@ Include this addon with your project. No need to "activate" as the inteded usage
 
 <details>
 <summary>Export Game as Pack</summary>
+
+</details>
 
 ## Game Pack
 This game can be [exported](https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html#generating-pck-files) as a `.pck` and [imported](https://docs.godotengine.org/en/stable/tutorials/export/exporting_pcks.html#opening-pck-files-at-runtime) into another Godot game client, like the [Godot Game Client](https://github.com/kirbycope/godot-game-client).
