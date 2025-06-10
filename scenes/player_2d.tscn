@@ -139,4 +139,3 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_vgyao")
 
 [node name="Controls" parent="." instance=ExtResource("16_8ucqq")]
-layer = 0
