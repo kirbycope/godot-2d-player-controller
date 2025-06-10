@@ -17,16 +17,13 @@ Include this addon with your project. No need to "activate" as the inteded usage
 1. Run `bash ci/install-2d-player-controller.sh`
     - This script will download the [2d_player_controller](/addons/2d_player_controller) folder from _this_ repo and then cleanup the `.git` files/folders.
 
-<details>
-<summary>Using Addons</summary>
-
-### Installing the Addon
-1. Download [install-3d-player-controller.sh](ci/install-3d-player-controller.sh)
+### Installing the Virtual Controller Sub-Module
+1. Download [install-virtual-controller.sh](ci/install-virtual-controller.sh)
 1. Move the file to a folder named `ci` in your project
 1. Open your project in VS Code
 1. Open the "Git Bash" terminal
-1. Run `bash ci/install-3d-player-controller.sh`
-	- This script will download the [3d_player_controller](/addons/3d_player_controller) folder from _this_ repo and then cleanup the `.git` files/folders.
+1. Run `bash ci/install-virtual-controller.sh`
+	- This script will download the [virtual_controller](/addons/virtual_controller) folder from _its_ repo and then cleanup the `.git` files/folders.
 
 </details>
 
