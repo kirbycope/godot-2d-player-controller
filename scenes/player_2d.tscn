@@ -1,7 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://cgd3bbjgloxjh"]
 
-[ext_resource type="Script" path="res://addons/2d_player_controller/player_2d.gd" id="1_o3lw7"]
-[ext_resource type="Script" path="res://addons/2d_player_controller/virtual_controller_2d.gd" id="2_smmca"]
+[ext_resource type="Script" uid="uid://cfv03bdu2mm3w" path="res://addons/2d_player_controller/player_2d.gd" id="1_o3lw7"]
 [ext_resource type="Texture2D" uid="uid://b3ial4eqslpsk" path="res://assets/kenney_nl/platformer_assets_base/png/p1_stand.png" id="3_8ubyx"]
 [ext_resource type="Texture2D" uid="uid://bovvxxk50cgqe" path="res://assets/kenney_nl/platformer_assets_base/png/p1_hurt.png" id="4_imm4g"]
 [ext_resource type="Texture2D" uid="uid://bhhraiheh4i2n" path="res://assets/kenney_nl/platformer_assets_base/png/p1_jump.png" id="5_4otdx"]
@@ -15,10 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cbn72ubq0ydle" path="res://assets/kenney_nl/platformer_assets_base/png/p1_walk/p1_walk08.png" id="13_2wukp"]
 [ext_resource type="Texture2D" uid="uid://4d6ejkp653j2" path="res://assets/kenney_nl/platformer_assets_base/png/p1_walk/p1_walk09.png" id="14_teby2"]
 [ext_resource type="Texture2D" uid="uid://yf5yaonj6lf0" path="res://assets/kenney_nl/platformer_assets_base/png/p1_walk/p1_walk10.png" id="15_1fjif"]
+[ext_resource type="PackedScene" uid="uid://cx7x0f3lh4aus" path="res://addons/virtual_controller/scenes/canvas_layer.tscn" id="16_8ucqq"]
 [ext_resource type="Texture2D" uid="uid://ex61yo0vj06h" path="res://assets/kenney_nl/platformer_assets_base/png/p1_walk/p1_walk11.png" id="16_dvafr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgyao"]
-size = Vector2(16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kljw2"]
 region = Rect2(154, 1, 16, 16)
@@ -120,18 +117,12 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgyao"]
+size = Vector2(16, 32)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 texture_filter = 1
 script = ExtResource("1_o3lw7")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="VirtualController" type="Node2D" parent="CanvasLayer"]
-script = ExtResource("2_smmca")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_vgyao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 1)
@@ -142,3 +133,10 @@ autoplay = "default"
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 limit_top = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vgyao")
+
+[node name="Controls" parent="." instance=ExtResource("16_8ucqq")]
+layer = 0
