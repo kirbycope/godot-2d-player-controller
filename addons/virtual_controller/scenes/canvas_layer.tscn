@@ -86,7 +86,6 @@ script = ExtResource("1_c4rma")
 current_theme = 3
 
 [node name="VirtualButtons" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
